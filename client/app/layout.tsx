@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import { Providers } from './providers';
 import clsx from 'clsx';
 import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,12 +23,12 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <div className='flex flex-col justify-between h-full'>
+          <div className='flex flex-col justify-between h-screen '>
             <div>
               <Navbar />
             </div>
             {children}
-            <div>{/* <Footer /> */}</div>
+            <Footer />
           </div>
         </Providers>
       </body>

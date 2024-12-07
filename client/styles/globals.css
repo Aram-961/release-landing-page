@@ -7,6 +7,17 @@
   src: url('../public/font/Syne/static/Syne-Bold.ttf');
 }
 
+@font-face {
+  font-family: 'Nico-Moji';
+  src: url('../public/font/NicoMoji/NicoMoji-Regular.ttf');
+}
+
+/* Open Sans Font */
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('../public/font/OpenSans/static/OpenSans-Regular.ttf');
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -18,7 +29,19 @@
     font-family: 'Syne-Bold', sans-serif;
   }
 
+  .font-nico-moji {
+    font-family: 'nico-moji', sans-serif;
+  }
+
+  .font-open-sans {
+    font-family: 'open-sans', sans-serif;
+  }
+
   .responsiveWidth {
     @apply w-screen max-w-[400px] sm:max-w-screen-sm md:max-w-[1060px] lg:max-w-screen-lg xl:max-w-screen-xl;
+  }
+
+  .textPrimary {
+    @apply text-darkBlue-100;
   }
 }

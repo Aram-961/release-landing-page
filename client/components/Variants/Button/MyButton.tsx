@@ -7,7 +7,8 @@ export const MyButton = extendVariants(Button, {
   variants: {
     // <- modify/add variants
     color: {
-      primary: 'bg-primary text-white  ',
+      primary:
+        'bg-[#FFDB5C] border-[#000] text-black font-semiBold w-[150px] p-4 px-0  font-open-sans textPrimary',
       success: 'bg-success text-green-700',
       danger: 'bg-red-500 text-white',
       secondary: 'bg-indigo-400 text-white',
