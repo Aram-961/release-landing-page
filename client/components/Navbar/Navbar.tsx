@@ -25,10 +25,8 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className='flex items-center w-full px-4'>
-      <div className=''>
-        <h1 className='font-nico-moji text-[2.5rem] text-[#1C2C41]'>Release</h1>
-      </div>
+    <div className='flex items-center w-full px-4 border-b-[1px] border-[#1C2C4180]'>
+      <h1 className='font-nico-moji text-[2.5rem] text-[#1C2C41]'>Release</h1>
       <div className='flex items-center justify-center gap-10 m-10 mx-auto '>
         {/* Left Arrow */}
         <NavbarButton ArrowIcon={arrowIcons[0]} />

@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import '../styles/globals.css';
-import { Providers } from './providers';
 import clsx from 'clsx';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
+import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,12 +23,12 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <div className='flex flex-col justify-between h-screen '>
+          <div className='flex flex-col justify-between h-screen'>
             <div>
               <Navbar />
             </div>
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </Providers>
       </body>
