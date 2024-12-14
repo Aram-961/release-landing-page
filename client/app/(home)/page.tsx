@@ -1,9 +1,30 @@
+import StatisticCardUI from '@/components/StatisticCard/StatisticCardUI';
+import statisticCardProps from '@/components/StatisticCard/type';
 import Link from 'next/link';
 
 export default function Home() {
+  const statisticData: statisticCardProps[] = [
+    {
+      id: 0,
+      status: 'Projects',
+      value: 120,
+    },
+
+    {
+      id: 1,
+      status: 'happy customers',
+      value: 200,
+    },
+
+    {
+      id: 2,
+      status: 'years in market',
+      value: 12,
+    },
+  ];
   return (
     <div className='flex flex-col justify-between h-full '>
-      <div className='w-full h-full px-4 bg-white '>
+      <div className='w-full h-full bg-white customSpacing '>
         <div className='flex flex-col gap-4'>
           <h1 className='font-syne-bold text-[#1C2C41] text-[5rem]'>
             Luxury living <br className='hidden md:block' /> experiences
@@ -18,7 +39,15 @@ export default function Home() {
           </p>
         </div>
       </div>
-      {/* <div className='bg-[#1C2C41] p-10 h-[250px] px-4'></div> */}
+      <div className='bg-[#1c2c41]  flex items-center gap-24 customSpacing'>
+        {statisticData.map((items, index) => (
+          <StatisticCardUI
+            status={items.status}
+            value={items.value}
+            id={index}
+          />
+        ))}
+      </div>
     </div>
   );
 }

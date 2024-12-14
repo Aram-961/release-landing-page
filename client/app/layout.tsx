@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body>
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
           <div className='flex flex-col justify-between h-screen'>
             <div>

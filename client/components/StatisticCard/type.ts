@@ -1,6 +1,7 @@
 type statisticCardProps = {
-  label: string;
+  id: number;
   value: string | number;
+  status: 'Projects' | 'happy customers' | 'years in market';
 };
 
 export default statisticCardProps;
