@@ -2,5 +2,5 @@
     <path
         d="M5 10.6113C4.44772 10.6113 4 11.059 4 11.6113C4 12.1636 4.44772 12.6113 5 12.6113V10.6113ZM5 12.6113L18 12.6113V10.6113L5 10.6113V12.6113Z"
         fill="#1C2C41" />
-    <path d="M14.3887 8L17.9998 11.6111L14.3887 15.2222" stroke="#1C2C41" stroke-width="2" stroke-linecap="round" />
+    <path d="M14.3887 8L17.9998 11.6111L14.3887 15.2222" stroke="#1C2C41" strokeWidth="2" stroke-linecap="round" />
 </svg>

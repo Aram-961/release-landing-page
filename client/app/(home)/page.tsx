@@ -1,3 +1,5 @@
+import SlideShow from '@/components/SlideShow/SlideShow';
+import slideShowProps from '@/components/SlideShow/type';
 import StatisticCardUI from '@/components/StatisticCard/StatisticCardUI';
 import statisticCardProps from '@/components/StatisticCard/type';
 import Link from 'next/link';
@@ -22,14 +24,25 @@ export default function Home() {
       value: 12,
     },
   ];
+
+  const slideImage = [
+    '/assets/homepageImage/CielEtJardinTower.jpeg',
+    '/assets/slideshowimage/slideshowimage.png',
+  ];
+
+  const slideShowData: slideShowProps[] = [
+    {
+      img: slideImage,
+    },
+  ];
   return (
-    <div className='flex flex-col justify-between h-full '>
-      <div className='w-full h-full bg-white customSpacing '>
-        <div className='flex flex-col gap-4'>
+    <>
+      <div className='flex w-full h-full bg-white customSpacing'>
+        <div className='flex flex-col gap-4 mt-12'>
           <h1 className='font-syne-bold text-[#1C2C41] text-[5rem]'>
             Luxury living <br className='hidden md:block' /> experiences
           </h1>
-          <p className='w-full text-lg md:w-1/2 font-open-sans textPrimary'>
+          <p className='w-full text-lg md:w-[60%] font-open-sans textPrimary'>
             Welcome to our premier property and client-realtor management
             platform, where innovation meets efficiency and seamless
             collaboration. Designed to redefine real estate operations, our
@@ -38,6 +51,9 @@ export default function Home() {
             in the modern real estate industry.
           </p>
         </div>
+        <div className='w-full border-2 border-red-500'>
+          <SlideShow img={slideShowData.img} />
+        </div>
       </div>
       <div className='bg-[#1c2c41]  flex items-center gap-24 customSpacing'>
         {statisticData.map((items, index) => (
@@ -45,9 +61,10 @@ export default function Home() {
             status={items.status}
             value={items.value}
             id={index}
+            key={index}
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
