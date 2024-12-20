@@ -6,12 +6,15 @@ import StatisticCardUI from '@/components/StatisticCard/StatisticCardUI';
 import statisticCardProps from '@/components/StatisticCard/type';
 import Link from 'next/link';
 
-export const slideShowData: slideShowProps[] = [
-  { img: '/assets/homepageImage/CielEtJardinTower.jpeg' },
-  { img: '/assets/slideshowimage/slideshowimage.png' },
-  { img: '/assets/slideshowimage/decoration.png' },
-];
+// export const slideShowData: slideShowProps[] = [
+//   { image: '/assets/homepageImage/CielEtJardinTower.jpeg' },
+//   { image: '/assets/slideshowimage/slideshowimage.png' },
+//   { image: '/assets/slideshowimage/decoration.png' },
+// ];
 
+const slideShowData = {
+  image: [{ src: '/assets/slideshowimage/apartment1.png' }],
+};
 const statisticData: statisticCardProps[] = [
   {
     id: 0,
@@ -33,13 +36,13 @@ const statisticData: statisticCardProps[] = [
 ];
 export default function Home() {
   return (
-    <>
-      <div className='flex justify-between w-full h-full pt-12 bg-white customSpacing '>
-        <div className='flex flex-col gap-4 mx-auto responsiveWidth'>
+    <div className='w-full h-full bg-white'>
+      {/* <div className='relative customSpacing'>
+        <div className='flex flex-col h-full gap-4 '>
           <h1 className='font-syne-bold text-[#1C2C41] text-[5rem]'>
             Luxury living <br className='hidden md:block' /> experiences
           </h1>
-          <p className='w-full text-lg font-open-sans textPrimary'>
+          <p className='w-full md:w-[60%] text-lg font-open-sans textPrimary'>
             Welcome to our premier property and client-realtor management
             platform, where innovation meets efficiency and seamless
             collaboration. Designed to redefine real estate operations, our
@@ -48,11 +51,11 @@ export default function Home() {
             in the modern real estate industry.
           </p>
         </div>
-        <div className='flex w-full h-full '>
-          <SlideShow img={slideShowData[0].img} />
+        <div className='w-full h-full rounded-[8px] border-2 border-red-500'>
+          <SlideShow image={slideShowData.image} />
         </div>
-      </div>{' '}
-      <div className='fixed bottom-0 w-full bg-[#1C2C41] text-white py-4  flex  items-center'>
+      </div> */}
+      {/* <div className='fixed bottom-0 w-full  bg-[#1C2C41] text-white py-4  flex items-center'>
         {statisticData.map((items, index) => (
           <div className='customSpacing'>
             <StatisticCardUI
@@ -62,7 +65,7 @@ export default function Home() {
             />
           </div>
         ))}
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }

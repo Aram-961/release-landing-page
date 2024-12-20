@@ -1,21 +1,21 @@
 import React from 'react';
 import slideShowProps from './type';
 import Image from 'next/image';
-import { slideShowData } from '@/app/(home)/page';
 
-const SlideShow = ({ img }: slideShowProps) => {
+type SlideShowProps = {
+  image: { src: string }[]; // Array of objects with a `src` property (adjust as needed)
+};
+const SlideShow = ({ image }: SlideShowProps) => {
   return (
-    <div className='w-full h-full'>
-      {slideShowData.map((items) => (
-        <div className='absolute'>
-          <Image
-            quality={100}
-            fill
-            style={{ objectFit: 'contain' }}
-            src={items.img}
-            alt='img'
-          />
-        </div>
+    <div>
+      {image.map((items) => (
+        <Image
+          quality={100}
+          fill
+          style={{ objectFit: 'contain' }}
+          src={items.src}
+          alt={items.src}
+        />
       ))}
     </div>
   );
