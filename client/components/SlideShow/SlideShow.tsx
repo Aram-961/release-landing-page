@@ -1,21 +1,22 @@
 import React from 'react';
 import slideShowProps from './type';
 import Image from 'next/image';
+import { slideShowData } from '@/app/(home)/page';
 
 const SlideShow = ({ img }: slideShowProps) => {
   return (
-    <div>
-      <div className='flex flex-col items-center gap-4'>
-        {img?.map((items) => (
+    <div className='w-full h-full'>
+      {slideShowData.map((items) => (
+        <div className='absolute'>
           <Image
-            width={800}
             quality={100}
+            fill
             style={{ objectFit: 'contain' }}
-            src={items}
-            alt=''
+            src={items.img}
+            alt='img'
           />
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

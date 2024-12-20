@@ -1,6 +1,6 @@
 import React from 'react';
 import NavbarButton from './NavbarButton/NavbarButton';
-import { ArrowLeft, ArrowRight } from '@/assets';
+import { ArrowLeft, ArrowRight } from '@/public';
 import Link from 'next/link';
 import { MyButton } from '../Variants/Button/MyButton';
 
@@ -13,19 +13,19 @@ const Navbar = () => {
   const navData: NavbarDataProps[] = [
     {
       id: 0,
-      link: '/about', // Provide a valid `link` value
+      link: '/about',
     },
     {
       id: 0,
-      link: '/properties', // Provide a valid `link` value
+      link: '/properties',
     },
     {
       id: 0,
-      link: '/client management', // Provide a valid `link` value
+      link: '/client management',
     },
   ];
   return (
-    <div className='flex items-center w-full  border-b-[1px] border-[#1C2C4180] customSpacing'>
+    <div className='flex items-center w-full customSpacing border-[#1C2C4180] '>
       <h1 className='font-nico-moji text-[2.5rem] text-[#1C2C41]'>Release</h1>
       <div className='flex items-center justify-center gap-10 m-10 mx-auto '>
         {/* Left Arrow */}

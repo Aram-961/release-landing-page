@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import '../styles/globals.css';
 import clsx from 'clsx';
 import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
+// import Footer from '@/components/Footer/Footer';
 import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -23,12 +23,14 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <div className='flex flex-col justify-between h-screen'>
+          <div className='flex flex-col justify-between gap-20 md:gap-0'>
             <div>
               <Navbar />
             </div>
-            {children}
-            {/* <Footer /> */}
+            <div className='w-full h-full '>{children}</div>
+            {/* <div>
+              <Footer />
+            </div> */}
           </div>
         </Providers>
       </body>

@@ -1,5 +1,5 @@
 type slideShowProps = {
-  img: string[];
+  img: string;
 };
 
 export default slideShowProps;

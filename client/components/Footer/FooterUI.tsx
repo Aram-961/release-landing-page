@@ -1,12 +1,11 @@
 import React from 'react';
-import statisticCardProps from './type';
-
-const StatisticCardUI = ({ status, value }: statisticCardProps) => {
+import statisticCardProps from '../StatisticCard/type';
+const FooterUI = ({ status, value }: statisticCardProps) => {
   const showPlusSign =
     status === 'happy customers' || status === 'years in market';
 
   return (
-    <div className='flex flex-col px-0 '>
+    <div className='flex flex-col px-0 my-10'>
       <h1 className='text-[4.5rem] font-syne-bold text-white'>
         {value}
         {showPlusSign && '+'}
@@ -16,4 +15,4 @@ const StatisticCardUI = ({ status, value }: statisticCardProps) => {
   );
 };
 
-export default StatisticCardUI;
+export default FooterUI;
