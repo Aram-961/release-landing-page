@@ -3,7 +3,7 @@ import slideShowProps from './type';
 import Image from 'next/image';
 
 type SlideShowProps = {
-  image: { src: string }[]; // Array of objects with a `src` property (adjust as needed)
+  image: { src: string }[];
 };
 const SlideShow = ({ image }: SlideShowProps) => {
   return (
