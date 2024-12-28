@@ -15,6 +15,11 @@ import Link from 'next/link';
 const slideShowData = {
   image: [{ src: '/assets/slideshowimage/apartment1.png' }],
 };
+
+const images = [
+  { src: '/assets/slideshowimage/apartment1.png' },
+  { src: '/assets/slideshowimage/apartment1.png' },
+];
 const statisticData: statisticCardProps[] = [
   {
     id: 0,
@@ -36,36 +41,51 @@ const statisticData: statisticCardProps[] = [
 ];
 export default function Home() {
   return (
-    <div className='w-full h-full bg-white'>
-      {/* <div className='relative customSpacing'>
-        <div className='flex flex-col h-full gap-4 '>
-          <h1 className='font-syne-bold text-[#1C2C41] text-[5rem]'>
-            Luxury living <br className='hidden md:block' /> experiences
+    <div className='flex flex-col justify-between w-full h-full'>
+      <div className='relative flex items-center w-full h-full px-2 md:customSpacing'>
+        <div className='flex flex-col gap-2 my-14'>
+          <h1 className='font-syne-bold text-[4rem] textPrimary'>
+            Elevating Luxury, <br className='hidden md:block' /> Effortlessly
+            Managed
           </h1>
-          <p className='w-full md:w-[60%] text-lg font-open-sans textPrimary'>
-            Welcome to our premier property and client-realtor management
-            platform, where innovation meets efficiency and seamless
-            collaboration. Designed to redefine real estate operations, our
-            solution empowers professionals to manage properties, tenants, and
-            client relationships with ease, setting a new standard for success
-            in the modern real estate industry.
+          <p className='font-open-sans w-full  textPrimary text-[1rem] md:w-[50%]'>
+            Welcome to our premier client management platform, where trust meets
+            innovation. Designed for efficiency and ease, our app redefines how
+            you manage appointments and property listings, offering a seamless
+            experience for modern real estate professionals.
           </p>
         </div>
-        <div className='w-full h-full rounded-[8px] border-2 border-red-500'>
-          <SlideShow image={slideShowData.image} />
+        {/* image scroller */}
+        <div className='w-[700px]  h-[560px] absolute right-[1%] top-0 z-20 rounded-[8px] mt-5'>
+          <SlideShow image={images} />
         </div>
-      </div> */}
-      {/* <div className='fixed bottom-0 w-full  bg-[#1C2C41] text-white py-4  flex items-center'>
-        {statisticData.map((items, index) => (
-          <div className='customSpacing'>
+      </div>
+      <div className='bg-[#1C2C41] fixed bottom-0 left-0 w-full h-[200px] z-10'>
+        <div className='flex items-center w-full h-full gap-10 mx-auto customSpacing '>
+          {statisticData.map((stats, index) => (
             <StatisticCardUI
-              id={items.id}
-              status={items.status}
-              value={items.value}
+              key={index}
+              status={stats.status}
+              id={stats.id}
+              value={stats.value}
             />
-          </div>
-        ))}
-      </div> */}
+          ))}
+        </div>
+      </div>
     </div>
   );
+}
+
+{
+  /* <div className='fixed bottom-0 w-full  bg-[#1C2C41] text-white py-4  flex items-center'>
+  {statisticData.map((items, index) => (
+    <div className='customSpacing'>
+      <StatisticCardUI
+        id={items.id}
+        status={items.status}
+        value={items.value}
+      />
+    </div>
+  ))}
+</div> */
 }

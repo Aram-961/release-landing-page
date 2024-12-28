@@ -6,7 +6,7 @@ const StatisticCardUI = ({ status, value }: statisticCardProps) => {
     status === 'happy customers' || status === 'years in market';
 
   return (
-    <div className='flex flex-col px-0 '>
+    <div className='flex flex-col px-0'>
       <h1 className='text-[4.5rem] font-syne-bold text-white'>
         {value}
         {showPlusSign && '+'}
