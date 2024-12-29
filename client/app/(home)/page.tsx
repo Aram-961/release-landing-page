@@ -19,6 +19,9 @@ const slideShowData = {
 const images = [
   { src: '/assets/slideshowimage/apartment1.png' },
   { src: '/assets/slideshowimage/apartment1.png' },
+  { src: '/assets/slideshowimage/apartment1.png' },
+  { src: '/assets/slideshowimage/apartment1.png' },
+  { src: '/assets/slideshowimage/apartment1.png' },
 ];
 const statisticData: statisticCardProps[] = [
   {
@@ -41,7 +44,7 @@ const statisticData: statisticCardProps[] = [
 ];
 export default function Home() {
   return (
-    <div className='flex flex-col justify-between w-full h-full'>
+    <div className='relative flex flex-col justify-between w-full h-full'>
       <div className='relative flex items-center w-full h-full px-2 md:customSpacing'>
         <div className='flex flex-col gap-2 my-14'>
           <h1 className='font-syne-bold text-[4rem] textPrimary'>
@@ -56,12 +59,12 @@ export default function Home() {
           </p>
         </div>
         {/* image scroller */}
-        <div className='w-[700px]  h-[560px] absolute right-[1%] top-0 z-20 rounded-[8px] mt-5'>
+        <div className='my-24 w-[600px] h-[600px] fixed right-5  top-0  rounded-[8px] overflow-hidden z-20'>
           <SlideShow image={images} />
         </div>
       </div>
       <div className='bg-[#1C2C41] fixed bottom-0 left-0 w-full h-[200px] z-10'>
-        <div className='flex items-center w-full h-full gap-10 mx-auto customSpacing '>
+        <div className='flex items-center w-full h-full gap-16 mx-auto customSpacing '>
           {statisticData.map((stats, index) => (
             <StatisticCardUI
               key={index}
