@@ -1,16 +1,7 @@
 'use client';
 import SlideShow from '@/components/SlideShow/SlideShow';
-import slideShowProps from '@/components/SlideShow/type';
 import StatisticCardUI from '@/components/StatisticCard/StatisticCardUI';
-// import StatisticCardUI from '@/components/StatisticCard/StatisticCardUI';
 import statisticCardProps from '@/components/StatisticCard/type';
-import Link from 'next/link';
-
-// export const slideShowData: slideShowProps[] = [
-//   { image: '/assets/homepageImage/CielEtJardinTower.jpeg' },
-//   { image: '/assets/slideshowimage/slideshowimage.png' },
-//   { image: '/assets/slideshowimage/decoration.png' },
-// ];
 
 const slideShowData = {
   image: [{ src: '/assets/slideshowimage/apartment1.png' }],

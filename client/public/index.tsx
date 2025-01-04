@@ -77,3 +77,21 @@ export const CloseIcon: React.FC<HamburgerMenuProps> = ({ onClick }) => (
     <path d='M45.191 45.191L26.809 26.809' stroke='#F4F3EF' strokeWidth='3' />
   </svg>
 );
+
+export const PlusIcon: React.FC<HamburgerMenuProps> = ({ onClick }) => (
+  <svg
+    onClick={onClick}
+    width='25'
+    height='25'
+    viewBox='0 0 25 25'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path d='M0.272933 12.7715H24.1883' stroke='#1C2C41' strokeWidth='3' />
+    <path
+      d='M12.2324 0.8125L12.2324 24.7278'
+      stroke='#1C2C41'
+      strokeWidth='3'
+    />
+  </svg>
+);

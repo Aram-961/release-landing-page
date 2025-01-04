@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='flex p-5 items-center w-full px-2 md:customSpacing border-b border-[#1C2C4180]'>
+    <div className='flex items-center w-full p-5 px-2 md:customSpacing '>
       {/* Logo */}
       <h1 className='font-nico-moji text-[2rem] text-[#1C2C41]'>Release</h1>
 

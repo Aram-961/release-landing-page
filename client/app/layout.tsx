@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import { Providers } from './providers';
 import DynamicNavbar from '@/components/Navbar/DynamicNavbar';
 import LayoutUtils from './layoutUtils';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,11 +26,20 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <div className='flex flex-col justify-between gap-20 md:gap-0'>
-            <div>
+          <div className='relative flex flex-col justify-between w-full h-full gap-20 md:gap-0'>
+            <div className='z-10'>
               <DynamicNavbar />
             </div>
-            <div className='w-full h-full '>{children}</div>
+            <div className='absolute top-0 flex items-center justify-center w-full h-screen bg-gradient-to-br from-purple-800 to-purple-900 '>
+              <Image
+                src='/assets/comingsoon.jpg'
+                style={{ objectFit: 'cover' }}
+                fill
+                alt=''
+              />
+              <h1 className='z-30 text-[2rem] font-syne-bold'>Coming Soon</h1>
+            </div>
+            {/* <div className='w-full h-full '>{children}</div> */}
             {/* <div>
               <Footer />
             </div> */}
